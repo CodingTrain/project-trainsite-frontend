@@ -10,15 +10,15 @@ To setup this project locally, follow these steps:
 - Install dependencies with `npm install`
 - Run `npm start` to run the project
 
+## Storybook
 
-## Build
+This project has a Storybook set up that should allow you to develop presentational components seperately from the complete front-end. This is useful to build up components when we don't have the page they should be in or similar. You can [find out more about Storybook here](https://storybook.js.org/).
 
-To fully build the project, follow these steps:
+You can launch the Storybook for this repository by doing the following:
 
 - Fork or clone this repository
 - Install dependencies with `npm install`
-- Run `npm start` to run the development server
-
+- Run `npm run storybook` to run the storybook server
 
 ## Contributing
 
