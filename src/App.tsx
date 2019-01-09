@@ -9,11 +9,11 @@ class App extends Component {
     return (
       <CodingTrainThemeProvider>
         <Header />
-        <Button 
+        <Button
           link="https://thecodingtrain.com/"
           text="Watch on YT"
         />
-        <Button 
+        <Button
           link="https://thecodingtrain.com/"
           background="red"
           size="fat"

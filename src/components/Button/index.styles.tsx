@@ -11,8 +11,8 @@ export const Link = styled.a<{ background?: string, size?: string }>`
   padding: ${props => props.size === 'fat' ? '20px' : '15px 20px 15px 20px'};
   box-shadow: 0px 6px 0px 0px rgba(0, 0, 0, 0.06);
   transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
-  background: ${props => props.theme.colors[props.background || 'purple']}
-  transform: scale(1); 
+  background: ${props => props.theme.colors[props.background || 'purple']};
+  transform: scale(1);
 
   &:hover {
     transform: scale(0.98);
@@ -20,7 +20,6 @@ export const Link = styled.a<{ background?: string, size?: string }>`
 `;
 
 // these seem to be unnecessary delete if you agree
-// font-weight: normal; 
+// font-weight: normal;
 // vertical-align: middle;
 // border: none;
-

@@ -9,7 +9,7 @@ import Button from './index';
 storiesOf('Button', module)
   .add('general button', () =>
     <>
-    <div style={{height: '30px'}}></div>
+    <div style={{ height: '30px' }}></div>
       <Button
         link="https://thecodingtrain.com/"
         text="Watch on YT"
