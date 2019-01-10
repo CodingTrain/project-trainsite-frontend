@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from './index.styles';
 
-interface ButtonProps extends React.HTMLAttributes<HTMLAnchorElement> {
+import { StyledComponentProps } from 'styled-components';
+import { ThemeInterface } from '../../helpers/style/theme';
+
+interface ButtonProps extends StyledComponentProps<'a', ThemeInterface, {}, ''> {
   link: string;
   background?: string;
   size?: string;
-  target?: string;
 }
 
 export default class Button extends Component<ButtonProps> {
@@ -29,7 +31,14 @@ export default class Button extends Component<ButtonProps> {
     // otherwise return react router link
     return (
       // add router sorcery here
-    null
+      <Link
+        href={link}
+        background={background}
+        size={size}
+        {...otherProps}
+      >
+        {this.props.children}
+      </Link>
     );
   }
 }
