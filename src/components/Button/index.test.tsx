@@ -9,14 +9,17 @@ it('renders without crashing', () => {
     <CodingTrainThemeProvider>
       <Button
         link="https://thecodingtrain.com/"
-        text="Watch on YT"
-      />
+        target="_blank"
+      >
+        Watch on YT
+      </Button>
       <Button
         link="https://thecodingtrain.com/"
-        text="subscribe on youtube"
         background="red"
-        size="fat"
-      />
+        size="big"
+      >
+        subscribe on youtube
+      </Button>
     </CodingTrainThemeProvider>,
     div,
   );

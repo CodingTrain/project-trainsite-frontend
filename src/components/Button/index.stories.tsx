@@ -9,16 +9,19 @@ import Button from './index';
 storiesOf('Button', module)
   .add('general button', () =>
     <>
-    <div style={{ height: '30px' }}></div>
+      <div style={{ height: '30px' }}></div>
       <Button
         link="https://thecodingtrain.com/"
-        text="Watch on YT"
-      />
+        target="_blank"
+      >
+        Watch on YT
+      </Button>
       <Button
         link="https://thecodingtrain.com/"
-        text="subscribe on youtube"
         background="red"
-        size="fat"
-      />
+        size="big"
+      >
+        subscribe on youtube
+      </Button>
     </>,
   );

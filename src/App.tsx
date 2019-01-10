@@ -14,15 +14,17 @@ class App extends Component {
         <img src={pic} style={{ height: '120px' }}/><br />
         <Button
           link="https://thecodingtrain.com/"
-          text="Watch on YT"
           target="_blank"
-        />
+        >
+          Watch on YT
+        </Button>
         <Button
           link="https://thecodingtrain.com/"
           background="red"
-          size="fat"
-          text="subscribe on youtube"
-        />
+          size="big"
+        >
+          subscribe on youtube
+        </Button>
         <Footer />
       </CodingTrainThemeProvider>
     );

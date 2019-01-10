@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from './index.styles';
 
-interface ButtonProps {
+interface ButtonProps extends React.HTMLAttributes<HTMLAnchorElement> {
   link: string;
-  text: string;
   background?: string;
   size?: string;
   target?: string;
@@ -11,7 +10,7 @@ interface ButtonProps {
 
 export default class Button extends Component<ButtonProps> {
   render() {
-    const { link, background, size, text, target } = this.props;
+    const { link, background, size, ...otherProps } = this.props;
 
     // check if link is external or not
     if (link.includes('https')) {
@@ -21,22 +20,16 @@ export default class Button extends Component<ButtonProps> {
           href={link}
           background={background}
           size={size}
-          target={target === '_blank' ? '_blank' : '_self'}
+          {...otherProps}
         >
-          {text}
+          {this.props.children}
         </Link>
       );
     }
     // otherwise return react router link
     return (
-      // add router sourcery here
-      <Link
-        href={link}
-        background={background}
-        size={size}
-      >
-        {text}
-      </Link>
+      // add router sorcery here
+    null
     );
   }
 }
