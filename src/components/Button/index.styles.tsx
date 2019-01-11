@@ -1,6 +1,6 @@
 import styled from '../../helpers/style';
 
-export const Link = styled.a<{ background?: string, size?: string }>`
+export const ALink = styled.a<{ background?: string, size?: string }>`
   text-decoration: none;
   color: white;
   font-family: "cubanoregular";

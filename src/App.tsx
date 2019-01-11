@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, RouteComponentProps } from 'react-router-dom';
 import './App.css';
+import history from './helpers/browser-history'
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Button from './components/Button';
@@ -11,20 +13,19 @@ class App extends Component {
     return (
       <CodingTrainThemeProvider>
         <Header />
-        <img src={pic} style={{ height: '120px' }}/><br />
-        <Button
-          link="https://thecodingtrain.com/"
-          target="_blank"
-        >
-          Watch on YT
-        </Button>
-        <Button
-          link="https://thecodingtrain.com/"
-          background="red"
-          size="big"
-        >
-          subscribe on youtube
-        </Button>
+        <Router history={history}>
+          <main>
+            <Route exact path="/" render={() => (
+              <img src={pic} style={{ height: '120px' }} />
+            )} />
+            <Route exact path="/buttons" component={Buttons} />
+            <Route path="*" render={() => (
+              <p>
+                404 Not found.
+              </p>
+            )} />
+          </main>
+        </Router>
         <Footer />
       </CodingTrainThemeProvider>
     );
@@ -32,3 +33,21 @@ class App extends Component {
 }
 
 export default App;
+
+const Buttons = () => (
+  <div>
+    <Button
+      link="https://thecodingtrain.com/"
+      target="_blank"
+    >
+      Watch on YT
+    </Button>
+    <Button
+      link="/"
+      background="red"
+      size="big"
+    >
+      subscribe on youtube
+    </Button>
+  </div>
+);
