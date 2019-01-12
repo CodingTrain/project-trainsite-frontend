@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import { StyledComponentProps } from 'styled-components';
 // import { ThemeInterface } from '../../helpers/style/theme';
-import { StyledWrapper,  StyledH3, MediaWrapper } from './index.styles';
+import { StyledWrapper, Title, MediaWrapper } from './index.styles';
 import patreonImg from '../../assets/images/patreon.svg';
 import merchImg from '../../assets/images/merch-store.png';
 import amazonImg from '../../assets/images/amazon-store.png';
@@ -11,7 +11,7 @@ export default class Supports extends Component {
   render() {
     return (
       <>
-        <StyledH3>SUPPORT THE CODING TRAIN</StyledH3>
+        <Title>SUPPORT THE CODING TRAIN</Title>
         <MediaWrapper>
           <StyledWrapper>
               <img src={patreonImg} />

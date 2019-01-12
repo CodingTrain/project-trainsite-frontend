@@ -1,6 +1,6 @@
 import styled from '../../helpers/style';
 
-export const StyledH3 = styled.h2`
+export const Title = styled.h2`
   font-family: "cubanoregular";
   text-align: center;
   font-weight: normal;
@@ -8,7 +8,7 @@ export const StyledH3 = styled.h2`
 
 export const MediaWrapper = styled.div`
   display: flex;
-  ${props => props.theme.media.tabletBig`
+  ${props => props.theme.media.tablet`
     flex-wrap: wrap;
   `}
 `;
