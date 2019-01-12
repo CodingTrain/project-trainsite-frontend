@@ -5,7 +5,7 @@ import { StyledWrapper, Title, MediaWrapper } from './index.styles';
 import patreonImg from '../../assets/images/patreon.svg';
 import merchImg from '../../assets/images/merch-store.png';
 import amazonImg from '../../assets/images/amazon-store.png';
-import Button from '../Button'
+import Button from '../Button';
 
 export default class Supports extends Component {
   render() {
@@ -32,7 +32,7 @@ export default class Supports extends Component {
               <img src={merchImg} />
               <h3>Coding Train Store</h3>
               <p>
-                Visit Design by Humans for a variety of Coding Train merchandise. 
+                Visit Design by Humans for a variety of Coding Train merchandise.
               </p>
               <Button
                 link="https://www.designbyhumans.com/shop/codingtrain/"
@@ -61,5 +61,5 @@ export default class Supports extends Component {
         </MediaWrapper>
       </>
     );
-  };
+  }
 }
