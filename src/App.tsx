@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Button from './components/Button';
+import Support from './components/Support';
 import { CodingTrainThemeProvider } from './helpers/style/theme';
 import pic from './assets/images/octocat.png';
 
@@ -25,6 +26,7 @@ class App extends Component {
         >
           subscribe on youtube
         </Button>
+        <Support />
         <Footer />
       </CodingTrainThemeProvider>
     );
