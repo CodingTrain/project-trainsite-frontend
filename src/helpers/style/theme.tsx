@@ -11,6 +11,8 @@ export interface ThemeInterface {
     purple: string;
     red: string;
     yellow: string;
+    pink: string;
+    orange: string;
   };
   media: MediaInterface;
   timingFunction: string;
@@ -29,6 +31,8 @@ export const codingTrainTheme = {
     red: '#F35956',
     yellow: '#F1C500',
     white: '#FFFFFF',
+    pink: '#d9437f',
+    orange: '#f5720f',
     text: '#222',
   },
   timingFunction: 'cubic-bezier(0.4, 0.0, 0.2, 1)',
