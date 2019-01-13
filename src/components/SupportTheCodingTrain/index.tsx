@@ -7,11 +7,11 @@ import merchImg from '../../assets/images/merch-store.png';
 import amazonImg from '../../assets/images/amazon-store.png';
 import Button from '../Button';
 
-export default class Supports extends Component {
+export default class SupportTheCodingTrain extends Component {
   render() {
     return (
       <>
-        <Title>SUPPORT THE CODING TRAIN</Title>
+        <Title>Support the Coding Train</Title>
         <MediaWrapper>
           <StyledWrapper>
               <img src={patreonImg} />

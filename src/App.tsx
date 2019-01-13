@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Button from './components/Button';
-import Supports from './components/Supports';
+import SupportTheCodingTrain from './components/SupportTheCodingTrain';
 import { CodingTrainThemeProvider } from './helpers/style/theme';
 import pic from './assets/images/octocat.png';
 
@@ -13,20 +13,8 @@ class App extends Component {
       <CodingTrainThemeProvider>
         <Header />
         <img src={pic} style={{ height: '120px' }}/><br />
-        <Button
-          link="https://thecodingtrain.com/"
-          target="_blank"
-        >
-          Watch on YT
-        </Button>
-        <Button
-          link="https://thecodingtrain.com/"
-          background="red"
-          size="big"
-        >
-          subscribe on youtube
-        </Button>
-        <Supports />
+
+        <SupportTheCodingTrain />
         <Footer />
       </CodingTrainThemeProvider>
     );

@@ -14,7 +14,7 @@ export const MediaWrapper = styled.div`
 `;
 
 export const StyledWrapper = styled.div`
-  font-family: "Open Sans",sans-serif;
+  font-family: "Open Sans", sans-serif;
   width: 20rem;
   padding: 1rem;
   display: flex;
