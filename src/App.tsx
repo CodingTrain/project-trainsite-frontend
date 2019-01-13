@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Button from './components/Button';
@@ -13,7 +13,11 @@ class App extends Component {
       <CodingTrainThemeProvider>
         <Header />
         <img src={pic} style={{ height: '120px' }}/><br />
+        <Router>
+          <main>
 
+          </main>
+        </Router>
         <SupportTheCodingTrain />
         <Footer />
       </CodingTrainThemeProvider>

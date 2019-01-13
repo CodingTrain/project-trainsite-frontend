@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { storiesOf } from '@storybook/react';
 // import { action } from '@storybook/addon-actions';
 // import { linkTo } from '@storybook/addon-links';
@@ -14,14 +13,14 @@ storiesOf('Button', module)
         link="https://thecodingtrain.com/"
         target="_blank"
       >
-        Watch on YT
+        External link
       </Button>
       <Button
-        link="https://thecodingtrain.com/"
+        link="/"
         background="red"
         size="big"
       >
-        subscribe on youtube
+        react router link
       </Button>
     </>,
   );

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from './index.styles';
+import { ALink } from './index.styles';
+import { Link } from 'react-router-dom';
 
 import { StyledComponentProps } from 'styled-components';
 import { ThemeInterface } from '../../helpers/style/theme';
@@ -14,31 +15,31 @@ export default class Button extends Component<ButtonProps> {
   render() {
     const { link, background, size, ...otherProps } = this.props;
 
-    // check if link is external or not
     if (link.includes('https')) {
-      // return external
+      // return external ALink
       return (
-        <Link
+        <ALink
           href={link}
           background={background}
           size={size}
           {...otherProps}
         >
           {this.props.children}
-        </Link>
+        </ALink>
       );
     }
-    // otherwise return react router link
+
+    // return router Link
     return (
-      // add router sorcery here
-      <Link
-        href={link}
+      <ALink
+        as={Link}
+        to={link}
         background={background}
         size={size}
         {...otherProps}
       >
-        {this.props.children}
-      </Link>
+       {this.props.children}
+      </ALink>
     );
   }
 }

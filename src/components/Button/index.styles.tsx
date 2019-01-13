@@ -1,6 +1,6 @@
 import styled from '../../helpers/style';
 
-export const Link = styled.a<{ background?: string, size?: string }>`
+export const ALink = styled.a<{ background?: string, size?: string, to?: any }>`
   text-decoration: none;
   color: white;
   font-family: "cubanoregular";
@@ -18,8 +18,3 @@ export const Link = styled.a<{ background?: string, size?: string }>`
     transform: scale(0.98);
   }
 `;
-
-// these seem to be unnecessary delete if you agree
-// font-weight: normal;
-// vertical-align: middle;
-// border: none;
