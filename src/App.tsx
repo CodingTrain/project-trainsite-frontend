@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -11,20 +12,19 @@ class App extends Component {
     return (
       <CodingTrainThemeProvider>
         <Header />
-        <img src={pic} style={{ height: '120px' }}/><br />
-        <Button
-          link="https://thecodingtrain.com/"
-          target="_blank"
-        >
-          Watch on YT
-        </Button>
-        <Button
-          link="https://thecodingtrain.com/"
-          background="red"
-          size="big"
-        >
-          subscribe on youtube
-        </Button>
+        <Router>
+          <main>
+            <Route exact path="/" render={() => (
+              <>
+                <img src={pic} style={{ height: '120px' }} />
+                <Button link="buttons" background="green">
+                  Go to buttons page
+                </Button>
+              </>
+            )} />
+            <Route exact path="/buttons" component={Buttons} />
+          </main>
+        </Router>
         <Footer />
       </CodingTrainThemeProvider>
     );
@@ -32,3 +32,21 @@ class App extends Component {
 }
 
 export default App;
+
+const Buttons = () => (
+  <div>
+    <Button
+      link="https://thecodingtrain.com/"
+      target="_blank"
+    >
+      External link
+    </Button>
+    <Button
+      link="/"
+      background="red"
+      size="big"
+    >
+      Router link to /
+    </Button>
+  </div>
+);

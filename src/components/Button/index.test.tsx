@@ -1,4 +1,5 @@
 import React from 'react';
+import { MemoryRouter as Router } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import Button from './index';
 import { CodingTrainThemeProvider } from '../../helpers/style/theme';
@@ -6,21 +7,23 @@ import { CodingTrainThemeProvider } from '../../helpers/style/theme';
 it('renders without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(
-    <CodingTrainThemeProvider>
-      <Button
+    <Router>
+     <CodingTrainThemeProvider>
+       <Button
         link="https://thecodingtrain.com/"
         target="_blank"
-      >
-        Watch on YT
-      </Button>
-      <Button
-        link="https://thecodingtrain.com/"
+       >
+        External link
+       </Button>
+       <Button
+        link="/"
         background="red"
         size="big"
-      >
-        subscribe on youtube
-      </Button>
-    </CodingTrainThemeProvider>,
+       >
+        react router link
+       </Button>
+      </CodingTrainThemeProvider>
+    </Router>,
     div,
   );
   ReactDOM.unmountComponentAtNode(div);
