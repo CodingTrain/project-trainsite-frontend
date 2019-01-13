@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ALink, Div } from './index.styles';
+import { ALink } from './index.styles';
 import { Link } from 'react-router-dom';
 
 import { StyledComponentProps } from 'styled-components';
@@ -31,17 +31,15 @@ export default class Button extends Component<ButtonProps> {
 
     // return router Link
     return (
-      <Link to={link}>
-        <Div
-          background={background}
-          size={size}
-          // otherProps throws error here,
-          // as you cannot pass href or target in div
-          // {...otherProps}
-        >
-          {this.props.children}
-        </Div>
-      </Link>
+      <ALink
+        as={Link}
+        to={link}
+        background={background}
+        size={size}
+        {...otherProps}
+      >
+       {this.props.children}
+      </ALink>
     );
   }
 }
