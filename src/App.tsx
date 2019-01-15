@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Button from './components/Button';
 import SupportTheCodingTrain from './components/SupportTheCodingTrain';
+import MobileNavigation from './components/MobileNavigation'
 import { CodingTrainThemeProvider } from './helpers/style/theme';
 import pic from './assets/images/octocat.png';
 
@@ -15,11 +16,11 @@ class App extends Component {
         <img src={pic} style={{ height: '120px' }}/><br />
         <Router>
           <main>
-
+            <Route exact path="/" component={SupportTheCodingTrain} />
           </main>
         </Router>
-        <SupportTheCodingTrain />
         <Footer />
+        <MobileNavigation />
       </CodingTrainThemeProvider>
     );
   }

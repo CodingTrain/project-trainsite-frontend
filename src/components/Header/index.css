@@ -10,7 +10,7 @@ header {
 nav.header-links {
   font-family: cubanoregular;
   width: 100%;
-  height: 5rem;
+  /* height: 5rem; */
   font-size: 18px;
   overflow: hidden;
   background: linear-gradient(rgba(0, 0, 0, 0.2), transparent);
@@ -35,6 +35,9 @@ css variables, here var(--mobile)
 does not work inside media queries :(
  */
 @media (max-width: 550px) {
+  nav.header-links {
+    display: none;
+  }
   header {
     background-image: url(../../assets/images/header-mobile.jpg);
     background-position: center;
