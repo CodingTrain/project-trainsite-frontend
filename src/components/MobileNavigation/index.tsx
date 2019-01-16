@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import Button from '../Button';
 import './index.css';
 
 export default class BurgerIcon extends Component {
   burgerRef: any;
-  rootEl: any;
+  // rootEl: any;
   mobileLinksRef: any;
   mobileBackDropRef: any;
   constructor(props: any) {
@@ -23,29 +23,33 @@ export default class BurgerIcon extends Component {
     this.mobileBackDropRef.current.classList.toggle('open');
   }
 
-  componentWillMount() {
-    this.rootEl = document.getElementById('root');
-  }
+  // componentWillMount() {
+  //   this.rootEl = document.getElementById('root');
+  // }
 
   render() {
     // return ReactDOM.createPortal(
     return (
       <BrowserRouter>
-      <>
-      <div className="mobilenav-backdrop" ref={this.mobileBackDropRef}></div>
-        <div
-          id="burger-container"
-          onClick={this.toggleMobileNavigation}
-          ref={this.burgerRef}
-        >
-          <div id="burger">
-            <span>&nbsp;</span>
-            <span>&nbsp;</span>
-            <span>&nbsp;</span>
-          </div>
+        <>
+          <div className="mobilenav-backdrop" ref={this.mobileBackDropRef}></div>
+          <div
+            id="burger-container"
+            onClick={this.toggleMobileNavigation}
+            ref={this.burgerRef}
+          >
+            <div id="burger">
+              <span>&nbsp;</span>
+              <span>&nbsp;</span>
+              <span>&nbsp;</span>
+            </div>
           </div>
 
-          <nav className="mobile-links" ref={this.mobileLinksRef} onClick={this.toggleMobileNavigation}>
+          <nav
+            className="mobile-links"
+            ref={this.mobileLinksRef}
+            onClick={this.toggleMobileNavigation}
+          >
             <Button
               className="mobile-link"
               link="/"

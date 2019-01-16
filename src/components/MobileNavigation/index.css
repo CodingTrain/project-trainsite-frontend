@@ -1,3 +1,4 @@
+/* mobile nav button */
 #burger-container {
   display: none;
   position: fixed;
@@ -47,14 +48,13 @@
 }
 
 /* mobile link styles */
-
 .mobile-links {
   display: flex;
   flex-direction: column;
   width: 210px;
   position: fixed;
   top: 100px;
-  left: -500px;
+  left: -300px;
   transition: all ease-in-out 0.5s;
 }
 
@@ -73,10 +73,12 @@
   top: 0px;
   width: 0vw;
   height: 100vh;
-  transition: all 500ms ease-in-out;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
   pointer-events: none;
 }
 
 .mobilenav-backdrop.open {
   width: 100vw;
+  opacity: 1;
 }
