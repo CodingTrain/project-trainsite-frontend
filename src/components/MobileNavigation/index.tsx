@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-// import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import Button from '../Button';
 import './index.css';
 
 export default class BurgerIcon extends Component {
   burgerRef: any;
-  // rootEl: any;
   mobileLinksRef: any;
   mobileBackDropRef: any;
   constructor(props: any) {
@@ -23,16 +21,15 @@ export default class BurgerIcon extends Component {
     this.mobileBackDropRef.current.classList.toggle('open');
   }
 
-  // componentWillMount() {
-  //   this.rootEl = document.getElementById('root');
-  // }
-
   render() {
-    // return ReactDOM.createPortal(
     return (
       <BrowserRouter>
         <>
-          <div className="mobilenav-backdrop" ref={this.mobileBackDropRef}></div>
+          <div
+            className="mobilenav-backdrop"
+            ref={this.mobileBackDropRef}
+            onClick={this.toggleMobileNavigation}>
+          </div>
           <div
             id="burger-container"
             onClick={this.toggleMobileNavigation}
@@ -84,7 +81,6 @@ export default class BurgerIcon extends Component {
           </nav>
         </>
       </BrowserRouter>
-      // this.rootEl,
     );
   }
 }
