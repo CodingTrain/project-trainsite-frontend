@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Button from './components/Button';
 import SupportTheCodingTrain from './components/SupportTheCodingTrain';
-import MobileNavigation from './components/MobileNavigation'
+import MobileNavigation from './components/MobileNavigation';
 import { CodingTrainThemeProvider } from './helpers/style/theme';
 import pic from './assets/images/octocat.png';
 
