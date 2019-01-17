@@ -75,10 +75,13 @@
   height: 100vh;
   opacity: 0;
   transition: opacity 500ms ease-in-out;
-  /* pointer-events: none; */
 }
 
 .mobilenav-backdrop.open {
   width: 100vw;
-  opacity: 1;
+  opacity: 0.5;
+}
+
+#page-wrapper.open {
+  filter: blur(8px);
 }

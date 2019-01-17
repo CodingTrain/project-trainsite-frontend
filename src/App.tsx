@@ -11,17 +11,19 @@ import pic from './assets/images/octocat.png';
 class App extends Component {
   render() {
     return (
-      <CodingTrainThemeProvider>
-        <Header />
-        <img src={pic} style={{ height: '120px' }}/><br />
-        <Router>
-          <main>
-            <Route exact path="/" component={SupportTheCodingTrain} />
-          </main>
-        </Router>
-        <Footer />
-        <MobileNavigation />
-      </CodingTrainThemeProvider>
+      <Router>
+        <CodingTrainThemeProvider>
+          <div id="page-wrapper">
+            <Header />
+            <img src={pic} style={{ height: '120px' }} /><br />
+            <main>
+              <Route exact path="/" component={SupportTheCodingTrain} />
+            </main>
+            <Footer />
+          </div>
+          <MobileNavigation />
+        </CodingTrainThemeProvider>
+      </Router>
     );
   }
 }
