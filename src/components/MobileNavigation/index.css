@@ -82,6 +82,10 @@
   opacity: 0.5;
 }
 
+#page-wrapper {
+  transition: all 500ms ease-in-out;
+}
+
 #page-wrapper.open {
-  filter: blur(8px);
+  filter: blur(5px);
 }
