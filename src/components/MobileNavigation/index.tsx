@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import Button from '../Button';
-import './index.css';
+import { Backdrop, BurgerContainer, MobileNav } from './index.styles';
+import { any } from 'prop-types';
 
 export default class BurgerIcon extends Component {
   burgerRef: any;
   mobileLinksRef: any;
   mobileBackDropRef: any;
   pageWrapper: any;
+  mobileLinks: any;
   constructor(props: any) {
     super(props);
     this.burgerRef = React.createRef();
@@ -17,6 +19,7 @@ export default class BurgerIcon extends Component {
 
   componentDidMount() {
     this.pageWrapper = document.getElementById('page-wrapper');
+    this.mobileLinks = document.querySelectorAll('.mobile-links *');
   }
 
   toggleMobileNavigation() {
@@ -24,17 +27,18 @@ export default class BurgerIcon extends Component {
     this.mobileLinksRef.current.classList.toggle('open');
     this.mobileBackDropRef.current.classList.toggle('open');
     this.pageWrapper.classList.toggle('open');
+    this.mobileLinks.forEach((link: any) => link.classList.toggle('open'));
   }
 
   render() {
     return (
       <>
-        <div
+        <Backdrop
           className="mobilenav-backdrop"
           ref={this.mobileBackDropRef}
           onClick={this.toggleMobileNavigation}>
-        </div>
-        <div
+        </Backdrop>
+        <BurgerContainer
           id="burger-container"
           onClick={this.toggleMobileNavigation}
           ref={this.burgerRef}
@@ -44,9 +48,9 @@ export default class BurgerIcon extends Component {
             <span>&nbsp;</span>
             <span>&nbsp;</span>
           </div>
-        </div>
+        </BurgerContainer>
 
-        <nav
+        <MobileNav
           className="mobile-links"
           ref={this.mobileLinksRef}
           onClick={this.toggleMobileNavigation}
@@ -82,7 +86,7 @@ export default class BurgerIcon extends Component {
             background="blue"
             target="_blank"
           >Github</Button>
-        </nav>
+        </MobileNav>
       </>
     );
   }

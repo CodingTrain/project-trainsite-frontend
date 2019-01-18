@@ -11,7 +11,8 @@ storiesOf('MobileNavigation', module)
   .add('MobileNavigation', () =>
     <Router>
       <CodingTrainThemeProvider>
-        You have to make the screen under 550px wide for this to show up.
+        You have to make the screen under 550px wide for this to show up.<br />
+        Only the button shows up here, no links popping up :(
         <MobileNavigation />
       </CodingTrainThemeProvider>
     </Router>,
