@@ -3,7 +3,7 @@ import styled from '../../helpers/style';
 export const ALink = styled.a<{ background?: string, size?: string, to?: any }>`
   text-decoration: none;
   color: white;
-  font-family: "cubanoregular";
+  font-family: "cubanoregular", sans-serif;
   letter-spacing: 0.4px;
   border-radius: 5px;
   display: inline-block;

@@ -1,7 +1,7 @@
 import styled from '../../helpers/style';
 
 export const Title = styled.h2`
-  font-family: "cubanoregular";
+  font-family: cubanoregular, sans-serif;
   text-align: center;
   font-weight: normal;
 `;

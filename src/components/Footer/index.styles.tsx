@@ -3,7 +3,7 @@ import styled from '../../helpers/style';
 export const FooterWrapper = styled.footer`
   margin-top: 50px;
   display: flex;
-  font-family: cubanoregular;
+  font-family: cubanoregular, sans-serif;
 
   ${props => props.theme.media.tabletSmall`
     flex-wrap: wrap;
