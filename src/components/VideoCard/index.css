@@ -10,7 +10,13 @@
   justify-content: space-between;
 }
 
-.VideoCard > a {
+@media (hover: hover) {
+  .VideoCard:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.VideoCard>a {
   text-decoration: none;
   color: #222;
 }
