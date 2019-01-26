@@ -8,9 +8,16 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: all 250ms;
 }
 
-.VideoCard > a {
+@media (hover: hover) {
+  .VideoCard:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.VideoCard>a {
   text-decoration: none;
   color: #222;
 }
