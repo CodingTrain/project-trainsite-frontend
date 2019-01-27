@@ -3,8 +3,7 @@ import styled from '../../helpers/style';
 export const FooterWrapper = styled.footer`
   margin-top: 50px;
   display: flex;
-  font-family: cubanoregular;
-
+  font-family: cubanoregular, sans-serif;
   ${props => props.theme.media.tabletSmall`
     flex-wrap: wrap;
   `}
@@ -29,5 +28,5 @@ export const Link = styled.a<{ color?: string, background: string }>`
     transform: scale(1.2);
   }
 
-  background: ${props => props.theme.colors[props.background]}
+  background: ${props => props.theme.colors[props.background]};
 `;
