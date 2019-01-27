@@ -21,7 +21,7 @@ export const StyledWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin: 0px auto;
+  margin: 0 auto;
   text-align: center;
 
   & img {
