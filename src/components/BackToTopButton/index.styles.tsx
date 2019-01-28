@@ -20,13 +20,13 @@ export const BackToTopStyles = styled.div`
   & span:nth-child(1) {
     transform: rotate(-45deg);
     float: left;
-    left: 5px;
+    left: 7px;
     top: 0px;
   }
   & span:nth-child(2) {
     transform: rotate(45deg);
     float: right;
-    right: 5px;
+    right: 7px;
     top: 0px;
   }
 
