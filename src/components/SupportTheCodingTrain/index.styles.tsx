@@ -1,7 +1,7 @@
 import styled from '../../helpers/style';
 
 export const Title = styled.h2`
-  font-family: "cubanoregular";
+  font-family: cubanoregular, sans-serif;
   text-align: center;
   font-weight: normal;
 `;
@@ -21,7 +21,7 @@ export const StyledWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin: 0px auto;
+  margin: 0 auto;
   text-align: center;
 
   & img {

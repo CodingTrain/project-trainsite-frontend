@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import { VideoType } from '../../helpers/types';
+import Button from '../Button';
 
 import './index.css';
 
@@ -23,7 +24,7 @@ export class VideoCard extends Component<VideoCardProps> {
     const url = `video/${videoId}`;
     return (
       <div className="VideoCard">
-        <a href={url}>
+        <Link to={url}>
           <div className="video-header">
             <div className="thumb-container">
               <span className="video-badge">#{video_number}</span>
@@ -43,13 +44,13 @@ export class VideoCard extends Component<VideoCardProps> {
               }
             </span>
           </div>
-        </a>
+        </Link>
         <div className="video-description">
           <p>{title}</p>
         </div>
         <div className="buttons">
-          <a href={`https://youtu.be/${videoId}`}>Watch on YT</a>
-          <a href={url}>To the challenge</a>
+          <Button link={`https://youtu.be/${videoId}`}>Watch on YT</Button>
+          <Button link={url}>To the challenge</Button>
         </div>
       </div>
     );
