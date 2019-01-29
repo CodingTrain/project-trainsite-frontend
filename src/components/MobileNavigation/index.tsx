@@ -1,47 +1,49 @@
 import React, { Component } from 'react';
-import Button from '../Button';
-import { Backdrop, BurgerContainer, MobileNav } from './index.styles';
-import { any } from 'prop-types';
+import { Link } from 'react-router-dom';
+// import Button from '../Button';
+import { Backdrop, BurgerContainer, Nav } from './index.styles';
 
-export default class BurgerIcon extends Component {
-  burgerRef: any;
-  mobileLinksRef: any;
-  mobileBackDropRef: any;
+export default class BurgerIcon extends Component<any, any> {
   pageWrapper: any;
-  mobileLinks: any;
   constructor(props: any) {
     super(props);
-    this.burgerRef = React.createRef();
-    this.mobileLinksRef = React.createRef();
-    this.mobileBackDropRef = React.createRef();
+    this.state = {
+      open: '',
+      mobile: window.innerWidth < 620 ? true : false,
+    };
     this.toggleMobileNavigation = this.toggleMobileNavigation.bind(this);
   }
 
   componentDidMount() {
     this.pageWrapper = document.getElementById('page-wrapper');
-    this.mobileLinks = document.querySelectorAll('.mobile-links *');
+    window.addEventListener('resize', (e: any) => {
+      this.setState({
+        mobile: e.target.innerWidth < 620 ? true : false,
+      });
+    });
   }
 
   toggleMobileNavigation() {
-    this.burgerRef.current.classList.toggle('open');
-    this.mobileLinksRef.current.classList.toggle('open');
-    this.mobileBackDropRef.current.classList.toggle('open');
-    this.pageWrapper.classList.toggle('open');
-    this.mobileLinks.forEach((link: any) => link.classList.toggle('open'));
+    if (this.state.mobile) {
+      this.setState({
+        open: this.state.open === '' ? 'open' : '',
+      });
+      this.pageWrapper.classList.toggle('open');
+    }
   }
 
   render() {
+    const { open } = this.state;
     return (
       <>
         <Backdrop
-          className="mobilenav-backdrop"
-          ref={this.mobileBackDropRef}
+          className={`mobilenav-backdrop ${open}`}
           onClick={this.toggleMobileNavigation}>
         </Backdrop>
         <BurgerContainer
           id="burger-container"
+          className={open}
           onClick={this.toggleMobileNavigation}
-          ref={this.burgerRef}
         >
           <div id="burger">
             <span>&nbsp;</span>
@@ -50,43 +52,36 @@ export default class BurgerIcon extends Component {
           </div>
         </BurgerContainer>
 
-        <MobileNav
-          className="mobile-links"
-          ref={this.mobileLinksRef}
+        <Nav
+          className={`nav-links ${open}`}
           onClick={this.toggleMobileNavigation}
         >
-          <Button
-            className="mobile-link"
-            link="/"
-            background="blue"
-          >Home</Button>
-          <Button
-            className="mobile-link"
-            link="/"
-            background="blue"
-          >Coding Challenges</Button>
-          <Button
-            className="mobile-link"
-            link="/"
-            background="blue"
-          >Tutorials</Button>
-          <Button
-            className="mobile-link"
-            link="/"
-            background="blue"
-          >Streams</Button>
-          <Button
-            className="mobile-link"
-            link="/"
-            background="blue"
-          >Courses</Button>
-          <Button
-            className="mobile-link"
-            link="https://github.com/CodingTrain/website"
-            background="blue"
+          <Link
+            className={`nav-link ${open}`}
+            to="/"
+          >Home</Link>
+          <Link
+            className={`nav-link ${open}`}
+            to="/cc"
+          >Coding Challenges</Link>
+          <Link
+            className={`nav-link ${open}`}
+            to="/tutorials"
+          >Tutorials</Link>
+          <Link
+            className={`nav-link ${open}`}
+            to="/streams"
+          >Streams</Link>
+          <Link
+            className={`nav-link ${open}`}
+            to="/courses"
+          >Courses</Link>
+          <a
+            className={`nav-link ${open}`}
+            href="https://github.com/CodingTrain/website"
             target="_blank"
-          >Github</Button>
-        </MobileNav>
+          >Github</a>
+        </Nav>
       </>
     );
   }
