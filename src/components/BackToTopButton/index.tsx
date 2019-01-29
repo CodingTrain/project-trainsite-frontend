@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
 import { BackToTopStyles } from './index.styles';
 
-export default class BackToTopButton extends Component<any> {
+export default class BackToTopButton extends Component<{}, { open: boolean }> {
 
   state = {
-    open: '',
+    open: false,
   };
 
   componentDidMount() {
     document.addEventListener('scroll', () => {
       if (window.scrollY > 1000) {
         this.setState({
-          open: 'open',
+          open: true,
         });
       } else {
         this.setState({
-          open: '',
+          open: false,
         });
       }
     });
@@ -27,7 +27,7 @@ export default class BackToTopButton extends Component<any> {
         id="back-to-top-button"
         title="Back to top"
         onClick={() => window.scrollTo(0, 0)}
-        className={this.state.open}
+        open={this.state.open}
       >
         <span>&nbsp;</span>
         <span>&nbsp;</span>

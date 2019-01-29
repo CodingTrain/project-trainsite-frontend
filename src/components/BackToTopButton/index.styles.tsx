@@ -1,10 +1,10 @@
 import styled from '../../helpers/style';
 
-export const BackToTopStyles = styled.div`
+export const BackToTopStyles = styled.div<{ open: boolean}>`
   display: block;
   z-index: 99;
   position: fixed;
-  bottom: -50px;
+  bottom: ${props => props.open ? '5px' : '-50px'};
   right: 5px;
   background: ${props => props.theme.colors['blue']};
   padding: 20px 5px 10px 5px;
