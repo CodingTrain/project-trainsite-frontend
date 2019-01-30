@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import Button from '../Button';
 import { Backdrop, BurgerContainer, Nav } from './index.styles';
 
-export default class BurgerIcon extends Component<any, any> {
+interface IProps {}
+
+interface IState {
+  open: boolean;
+  mobile: boolean;
+}
+export default class BurgerIcon extends Component<IProps, IState> {
   pageWrapper: any;
-  constructor(props: any) {
+  constructor(props: IProps) {
     super(props);
     this.state = {
-      open: '',
-      mobile: window.innerWidth < 620 ? true : false,
+      open: false,
+      mobile: (window.innerWidth < 620),
     };
     this.toggleMobileNavigation = this.toggleMobileNavigation.bind(this);
   }
@@ -18,7 +23,7 @@ export default class BurgerIcon extends Component<any, any> {
     this.pageWrapper = document.getElementById('page-wrapper');
     window.addEventListener('resize', (e: any) => {
       this.setState({
-        mobile: e.target.innerWidth < 620 ? true : false,
+        mobile: (e.target.innerWidth < 620),
       });
     });
   }
@@ -26,7 +31,7 @@ export default class BurgerIcon extends Component<any, any> {
   toggleMobileNavigation() {
     if (this.state.mobile) {
       this.setState({
-        open: this.state.open === '' ? 'open' : '',
+        open: !this.state.open,
       });
       this.pageWrapper.classList.toggle('open');
     }
@@ -37,13 +42,13 @@ export default class BurgerIcon extends Component<any, any> {
     return (
       <>
         <Backdrop
-          className={`mobilenav-backdrop ${open}`}
-          onClick={this.toggleMobileNavigation}>
-        </Backdrop>
+          onClick={this.toggleMobileNavigation}
+          open={open}
+        />
         <BurgerContainer
           id="burger-container"
-          className={open}
           onClick={this.toggleMobileNavigation}
+          open={open}
         >
           <div id="burger">
             <span>&nbsp;</span>
@@ -53,31 +58,25 @@ export default class BurgerIcon extends Component<any, any> {
         </BurgerContainer>
 
         <Nav
-          className={`nav-links ${open}`}
           onClick={this.toggleMobileNavigation}
+          open={open}
         >
           <Link
-            className={`nav-link ${open}`}
             to="/"
           >Home</Link>
           <Link
-            className={`nav-link ${open}`}
             to="/cc"
           >Coding Challenges</Link>
           <Link
-            className={`nav-link ${open}`}
             to="/tutorials"
           >Tutorials</Link>
           <Link
-            className={`nav-link ${open}`}
             to="/streams"
           >Streams</Link>
           <Link
-            className={`nav-link ${open}`}
             to="/courses"
           >Courses</Link>
           <a
-            className={`nav-link ${open}`}
             href="https://github.com/CodingTrain/website"
             target="_blank"
           >Github</a>

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MobileNavigation from './index';
+import Navigation from './index';
 import { CodingTrainThemeProvider } from '../../helpers/style/theme';
 import { MemoryRouter as Router } from 'react-router-dom';
 
@@ -9,7 +9,7 @@ it('renders without crashing', () => {
   ReactDOM.render(
     <Router>
       <CodingTrainThemeProvider>
-        <MobileNavigation />
+        <Navigation />
       </CodingTrainThemeProvider>
     </Router>,
     div);

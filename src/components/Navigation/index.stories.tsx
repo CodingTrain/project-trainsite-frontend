@@ -5,15 +5,19 @@ import { storiesOf } from '@storybook/react';
 // import { linkTo } from '@storybook/addon-links';
 import { CodingTrainThemeProvider } from '../../helpers/style/theme';
 import { MemoryRouter as Router } from 'react-router-dom';
-import MobileNavigation from '.';
+import Navigation from '.';
+import { HeaderImage, PageWrapper } from '../../App.styles';
 
-storiesOf('MobileNavigation', module)
-  .add('MobileNavigation', () =>
+storiesOf('Navigation', module)
+  .add('Navigation', () =>
     <Router>
       <CodingTrainThemeProvider>
-        You have to make the screen under 550px wide for this to show up.<br />
-        Only the button shows up here, no links popping up :(
-        <MobileNavigation />
+        <PageWrapper>
+          <HeaderImage />
+          You have to make the screen under 620px wide for the mobile nav to show up.<br/>
+          No blur effect for some mysterious reason work here.
+        </PageWrapper>
+        <Navigation />
       </CodingTrainThemeProvider>
     </Router>,
   );

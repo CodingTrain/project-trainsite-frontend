@@ -1,6 +1,6 @@
 import styled, { css } from '../../helpers/style';
 
-export const BurgerContainer = styled.div`
+export const BurgerContainer = styled.div<{ open: boolean }>`
   display: none;
   position: fixed;
   top: 5px;
@@ -26,27 +26,29 @@ export const BurgerContainer = styled.div`
     transition: all ease-in-out 0.5s;
   }
 
-  &.open span:nth-child(1) {
-    transform: rotate(-135deg);
-    top: 20px;
-  }
+  ${props => props.open && css`
+      & span:nth-child(1) {
+        transform: rotate(-135deg);
+        top: 20px;
+      }
 
-  &.open span:nth-child(2) {
-    transform: rotate(180deg);
-    opacity: 0;
-  }
+      & span:nth-child(2) {
+        transform: rotate(180deg);
+        opacity: 0;
+      }
 
-  &.open span:nth-child(3) {
-    transform: rotate(135deg);
-    top: -20px;
-  }
+      & span:nth-child(3) {
+        transform: rotate(135deg);
+        top: -20px;
+      }
+  `}
 
   ${props => props.theme.media.tabletSmall`
     display: block;
   `}
 `;
 
-export const Backdrop = styled.div`
+export const Backdrop = styled.div<{ open: boolean }>`
   background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
   top: 0;
@@ -54,11 +56,10 @@ export const Backdrop = styled.div`
   height: 100vh;
   opacity: 0;
   transition: opacity 500ms ease-in-out;
-
-  &.open {
-    width: 100vw;
-    opacity: 0.5;
-  }
+  ${props => props.open && css`
+      width: 100vw;
+      opacity: 0.5;
+  `}
 `;
 
 function iterateDelays() {
@@ -75,7 +76,7 @@ function iterateDelays() {
   `;
 }
 
-export const Nav = styled.nav`
+export const Nav = styled.nav<{ open: boolean }>`
   font-family: cubanoregular, sans-serif;
   width: 100%;
   height: 3rem;
@@ -97,7 +98,7 @@ export const Nav = styled.nav`
   }
 
   ${ iterateDelays() }
-  ${props => props.theme.media.tabletSmall`
+  ${props => props.theme.media.tabletSmall<{ open: boolean }>`
     flex-direction: column;
     width: 0;
     height: 300px;
@@ -106,11 +107,6 @@ export const Nav = styled.nav`
     background: none;
     /* less than 6s has a weird jump going out */
     transition: all ease-in-out 6s;
-
-    &.open {
-      transition: all ease-in-out 0.2s;
-      width: 230px;
-    }
 
     & > a {
       position: relative;
@@ -124,8 +120,13 @@ export const Nav = styled.nav`
       transition: all ease-in-out 0.5s;
     }
 
-    & .nav-link.open {
-      left: 0;
-    }
-  `};
+    ${props => props.open && css`
+      transition: all ease-in-out 0.2s;
+      width: 230px;
+
+      & > a {
+        left: 0;
+      }
+    `}
+  `}
 `;
