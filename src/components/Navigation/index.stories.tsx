@@ -12,10 +12,9 @@ storiesOf('Navigation', module)
   .add('Navigation', () =>
     <Router>
       <CodingTrainThemeProvider>
-        <PageWrapper>
+        <PageWrapper id="page-wrapper">
           <HeaderImage />
-          You have to make the screen under 620px wide for the mobile nav to show up.<br/>
-          No blur effect for some mysterious reason work here.
+          You have to make the screen under 620px wide for the mobile nav to show up.
         </PageWrapper>
         <Navigation />
       </CodingTrainThemeProvider>

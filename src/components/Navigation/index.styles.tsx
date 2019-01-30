@@ -81,7 +81,6 @@ export const Nav = styled.nav<{ open: boolean }>`
   width: 100%;
   height: 3rem;
   font-size: 18px;
-  overflow: hidden;
   background: linear-gradient(rgba(0, 0, 0, 0.2), transparent);
   position: absolute;
   top: 0;
@@ -95,34 +94,33 @@ export const Nav = styled.nav<{ open: boolean }>`
     margin: 0 0.5em;
     padding-top: 10px;
     text-shadow: 0 0 5px #bbb;
+    transition: none;
   }
 
   ${ iterateDelays() }
   ${props => props.theme.media.tabletSmall<{ open: boolean }>`
     flex-direction: column;
+    align-items: start;
     width: 0;
     height: 300px;
     position: fixed;
     top: 100px;
+    left: 0;
     background: none;
-    /* less than 6s has a weird jump going out */
-    transition: all ease-in-out 6s;
 
     & > a {
       position: relative;
-      width: 75%;
+      width: 180px;
       text-align: center;
       left: -300px;
       margin: 3px;
       padding: 10px 20px 10px 20px;
       background-color: #2494c1;
       border-radius: 5px;
-      transition: all ease-in-out 0.5s;
+      transition: left ease-in-out 0.5s;
     }
 
     ${props => props.open && css`
-      transition: all ease-in-out 0.2s;
-      width: 230px;
 
       & > a {
         left: 0;
