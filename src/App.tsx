@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 // import Button from './components/Button';
 import SupportTheCodingTrain from './components/SupportTheCodingTrain';
 import Navigation from './components/Navigation';
+import BackToTopButton from './components/BackToTopButton';
 import { CodingTrainThemeProvider } from './helpers/style/theme';
 import { HeaderImage, PageWrapper } from './App.styles';
 import pic from './assets/images/octocat.png';
