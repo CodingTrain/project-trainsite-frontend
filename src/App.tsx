@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { CodingTrainThemeProvider } from './helpers/style/theme';
-import Header from './components/Header';
 import Footer from './components/Footer';
+// import Button from './components/Button';
 import SupportTheCodingTrain from './components/SupportTheCodingTrain';
-import BackToTopButton from './components/BackToTopButton';
+import Navigation from './components/Navigation';
+import { CodingTrainThemeProvider } from './helpers/style/theme';
+import { HeaderImage, PageWrapper } from './App.styles';
 import pic from './assets/images/octocat.png';
 
 class App extends Component {
@@ -12,13 +13,17 @@ class App extends Component {
     return (
       <Router>
         <CodingTrainThemeProvider>
-            <Header />
+          {/* PageWrapper is necessary for the blur effect */}
+          <PageWrapper id="page-wrapper">
+            <HeaderImage />
             <img src={pic} style={{ height: '120px' }} /><br />
             <main>
               <Route exact path="/" component={SupportTheCodingTrain} />
             </main>
             <Footer />
           <BackToTopButton />
+          </PageWrapper>
+          <Navigation />
         </CodingTrainThemeProvider>
       </Router>
     );

@@ -1,19 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { MemoryRouter as Router } from 'react-router-dom';
+import Navigation from './index';
 import { CodingTrainThemeProvider } from '../../helpers/style/theme';
-import { VideoCard } from './index';
-import { exampleVideo } from '../../helpers/testing';
+import { MemoryRouter as Router } from 'react-router-dom';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(
     <Router>
       <CodingTrainThemeProvider>
-        <VideoCard video={exampleVideo} />
+        <Navigation />
       </CodingTrainThemeProvider>
     </Router>,
-    div,
-  );
+    div);
   ReactDOM.unmountComponentAtNode(div);
 });
