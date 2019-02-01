@@ -2,9 +2,8 @@ import styled from '../../helpers/style';
 
 export const Wrapper = styled.div`
   display: flex;
+  justify-content: space-around;
   letter-spacing: inherit;
-  max-width: 1000px;
-  margin: 0 auto;
   ${props => props.theme.media.tablet`
     flex-wrap: wrap;
     justify-content: center;
@@ -30,9 +29,9 @@ export const ChooChoo = styled.div`
 
   & h1 {
     font-family: cubanoregular, sans-serif;
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: normal;
-    margin: 0;
+    /* margin: 0; */
   }
 
   & p {
@@ -43,4 +42,18 @@ export const ChooChoo = styled.div`
     margin: 0 1em 1em 0;
     max-width: 80%;
   }
+`;
+
+export const Title = styled.h2`
+  font-family: cubanoregular, sans-serif;
+  text-align: center;
+  font-weight: normal;
+  margin-top: 5rem;
+`;
+
+export const VideoCardWrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 5rem;
 `;

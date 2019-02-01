@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Wrapper, ChooChoo } from './index.styles';
+import { Wrapper, ChooChoo, Title, VideoCardWrapper } from './index.styles';
 import SupportTheCodingTrain from '../../components/SupportTheCodingTrain';
 import Button from '../../components/Button';
 import { VideoCard } from '../../components/VideoCard';
@@ -38,6 +38,12 @@ export default class Home extends Component {
           </ChooChoo>
           <VideoCard video={exampleVideo} />
         </Wrapper>
+        <Title>Latest Videos</Title>
+        <VideoCardWrapper>
+          <VideoCard video={exampleVideo} />
+          <VideoCard video={exampleVideo} />
+          <VideoCard video={exampleVideo} />
+        </VideoCardWrapper>
         <SupportTheCodingTrain />
       </>
     );
