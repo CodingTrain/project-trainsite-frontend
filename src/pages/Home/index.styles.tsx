@@ -6,7 +6,6 @@ export const Wrapper = styled.div`
   letter-spacing: inherit;
   ${props => props.theme.media.tablet`
     flex-wrap: wrap;
-    justify-content: center;
     text-align: center;
 
     & a {
@@ -31,7 +30,7 @@ export const ChooChoo = styled.div`
     font-family: cubanoregular, sans-serif;
     font-size: 4rem;
     font-weight: normal;
-    /* margin: 0; */
+    margin: 0;
   }
 
   & p {
