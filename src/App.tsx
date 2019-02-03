@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { CodingTrainThemeProvider } from './helpers/style/theme';
-import { HeaderImage, PageWrapper } from './App.styles';
+import { HeaderImage } from './App.styles';
 import Footer from './components/Footer';
 import Navigation from './components/Navigation';
 import BackToTopButton from './components/BackToTopButton';
@@ -12,16 +12,14 @@ class App extends Component {
     return (
       <Router>
         <CodingTrainThemeProvider>
-          {/* PageWrapper is necessary for the blur effect */}
-          <PageWrapper id="page-wrapper">
+          <Navigation>
             <HeaderImage />
             <main>
               <Route exact path="/" component={Home} />
             </main>
             <Footer />
-          <BackToTopButton />
-          </PageWrapper>
-          <Navigation />
+            <BackToTopButton />
+          </Navigation>
         </CodingTrainThemeProvider>
       </Router>
     );
