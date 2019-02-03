@@ -5,6 +5,11 @@
     ],
     "rules": {
       "import-name": false,
+      "jsx-ban-props": [
+        true,
+        ["className", "Prefer styled-components"],
+        ["id", "Prefer styled-components."]
+      ],
       "variable-name": [true, "allow-pascal-case"]
     }
 }
