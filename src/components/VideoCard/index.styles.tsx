@@ -1,4 +1,6 @@
-.VideoCard {
+import styled, { css } from '../../helpers/style';
+
+export const VideoContainer = styled.div`
   width: 35rem;
   box-shadow: 0 10px 20px #eee,0 6px 6px #d5d5d5;
   padding-bottom: 1em;
@@ -9,26 +11,26 @@
   flex-direction: column;
   justify-content: space-between;
   transition: all 250ms;
-}
 
-@media (hover: hover) {
-  .VideoCard:hover {
-    transform: translateY(-5px);
+  & a {
+    text-decoration: none;
+    color: #222;
   }
-}
 
-.VideoCard>a {
-  text-decoration: none;
-  color: #222;
-}
+  @media (hover: hover) {
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+`;
 
-.VideoCard .video-header .thumb-container {
+export const ThumbnailContainer = styled.div`
   width: 100%;
   height: auto;
   position: relative;
-}
+`;
 
-.VideoCard .video-header .thumb-container .video-badge {
+export const VideoBadge = styled.div`
   position: absolute;
   right: 0;
   bottom: 0;
@@ -39,45 +41,46 @@
   font-size: 2rem;
   padding: .5em .5em .5em .6em;
   border-radius: 5px 0em 0em;
-}
+`;
 
-.VideoCard .video-header .video-thumbnail {
+export const Thumbnail = styled.div<{ url: string }>`
   width: 35rem;
   height: 19.6875rem;
   background-size: cover;
   background-position: center;
-}
+  ${props => css`background-image: url(${props.url});`}
+`;
 
-.VideoCard .video-header h3 {
+export const VideoTitle = styled.h3`
   font-size: 2rem;
   padding: 1.25em .5em .4em 1em;
   margin: 0;
   text-align: left;
-}
+`;
 
-.VideoCard .video-header .video-date {
+export const VideoDate = styled.span`
   color: #888;
   font-size: 1.5rem;
   padding: 0em 1.25em;
-}
+`;
 
-.VideoCard .video-description {
+export const VideoDescription = styled.div`
   padding: 0 1.25em 1.5em 1.25em;
   flex: 1;
-}
+`;
 
-.VideoCard .buttons {
+export const Buttons = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 0em 2rem 1rem;
-}
 
-.VideoCard .buttons a {
-  font-size: 1.5rem;
-  background: #9659A7;
-  color: #FFF;
-  flex-grow: 2;
-  margin-left: .25em;
-  margin-right: .25em;
-  padding: 15px;
-}
+  & a {
+    font-size: 1.5rem;
+    background: #9659A7;
+    color: #FFF;
+    flex-grow: 2;
+    margin-left: .25em;
+    margin-right: .25em;
+    padding: 15px;
+  }
+`;
