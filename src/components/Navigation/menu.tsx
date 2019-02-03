@@ -36,13 +36,20 @@ export default class Menu extends Component<IProps> {
           isOpen={isOpen}
         />
         <BurgerContainer
+          id="burger-container"
           onClick={this.toggleMobileNavigation}
           isOpen={isOpen}
         >
           <div id="burger">
-            <span>&nbsp;</span>
-            <span>&nbsp;</span>
-            <span>&nbsp;</span>
+            <span>
+              &nbsp;
+            </span>
+            <span>
+              &nbsp;
+            </span>
+            <span>
+              &nbsp;
+            </span>
           </div>
         </BurgerContainer>
 
@@ -52,23 +59,35 @@ export default class Menu extends Component<IProps> {
         >
           <Link
             to="/"
-          >Home</Link>
+          >
+            Home
+          </Link>
           <Link
             to="/cc"
-          >Coding Challenges</Link>
+          >
+            Coding Challenges
+          </Link>
           <Link
             to="/tutorials"
-          >Tutorials</Link>
+          >
+            Tutorials
+          </Link>
           <Link
             to="/streams"
-          >Streams</Link>
+          >
+            Streams
+          </Link>
           <Link
             to="/courses"
-          >Courses</Link>
+          >
+            Courses
+          </Link>
           <a
             href="https://github.com/CodingTrain/website"
             target="_blank"
-          >Github</a>
+          >
+            Github
+          </a>
         </Nav>
       </>
     );

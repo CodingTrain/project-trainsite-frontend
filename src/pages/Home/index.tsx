@@ -25,7 +25,7 @@ export default class Home extends Component {
                 target="_blank"
               >
                 Subscribe on YouTube
-            </Button>
+              </Button>
               <Button
                 link="https://youtube.com/thecodingtrain/join"
                 background="blue"
@@ -33,7 +33,7 @@ export default class Home extends Component {
                 target="_blank"
               >
                 Become a Member
-            </Button>
+              </Button>
             </div>
           </ChooChoo>
           <VideoCard video={exampleVideo} />

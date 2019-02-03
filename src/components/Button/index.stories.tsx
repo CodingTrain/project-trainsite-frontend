@@ -6,9 +6,9 @@ import { storiesOf } from '@storybook/react';
 import Button from './index';
 
 storiesOf('Button', module)
-  .add('general button', () =>
+  .add('general button', () => (
     <>
-      <div style={{ height: '30px' }}></div>
+      <div style={{ height: '30px' }} />
       <Button
         link="https://thecodingtrain.com/"
         target="_blank"
@@ -22,5 +22,5 @@ storiesOf('Button', module)
       >
         react router link
       </Button>
-    </>,
-  );
+    </>
+  ));

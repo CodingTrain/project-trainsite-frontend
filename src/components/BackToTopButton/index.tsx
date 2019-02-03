@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { BackToTopStyles } from './index.styles';
 
-export default class BackToTopButton extends Component<{}, { open: boolean }> {
+const scrollToTop = () => window.scrollTo(0, 0);
 
+export default class BackToTopButton extends Component<{}, { open: boolean }> {
   state = {
     open: false,
   };
@@ -26,7 +27,7 @@ export default class BackToTopButton extends Component<{}, { open: boolean }> {
       <BackToTopStyles
         id="back-to-top-button"
         title="Back to top"
-        onClick={() => window.scrollTo(0, 0)}
+        onClick={scrollToTop}
         open={this.state.open}
       >
         <span>&nbsp;</span>
