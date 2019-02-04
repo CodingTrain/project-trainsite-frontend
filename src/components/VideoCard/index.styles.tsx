@@ -2,11 +2,11 @@ import styled, { css } from '../../helpers/style';
 
 export const VideoContainer = styled.div`
   width: 35rem;
-  box-shadow: 0 10px 20px #eee,0 6px 6px #d5d5d5;
+  box-shadow: 0 10px 20px #eee, 0 6px 6px #d5d5d5;
   padding-bottom: 1em;
   border-radius: 5px;
   overflow: hidden;
-  margin: 3rem 0rem;
+  margin: 3rem 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -14,7 +14,6 @@ export const VideoContainer = styled.div`
 
   & a {
     text-decoration: none;
-    color: #222;
   }
 
   @media (hover: hover) {
@@ -34,13 +33,13 @@ export const VideoBadge = styled.div`
   position: absolute;
   right: 0;
   bottom: 0;
-  background: #49BB6C;
-  color: #FFF;
-  font-family: "cubanoregular";
-  letter-spacing: .4;
+  background: ${props => props.theme.colors.green};
+  color: ${props => props.theme.colors.white};
+  font-family: "cubanoregular", sans-serif;
+  letter-spacing: 0.4;
   font-size: 2rem;
-  padding: .5em .5em .5em .6em;
-  border-radius: 5px 0em 0em;
+  padding: 0.5em 0.5em 0.5em 0.6em;
+  border-radius: 5px 0 0;
 `;
 
 export const Thumbnail = styled.div<{ url: string }>`
@@ -48,12 +47,15 @@ export const Thumbnail = styled.div<{ url: string }>`
   height: 19.6875rem;
   background-size: cover;
   background-position: center;
-  ${props => css`background-image: url(${props.url});`}
+  ${props => css`
+    background-image: url(${props.url});
+  `}
 `;
 
 export const VideoTitle = styled.h3`
+  color: #222;
   font-size: 2rem;
-  padding: 1.25em .5em .4em 1em;
+  padding: 1.25em 0.5em 0.4em 1em;
   margin: 0;
   text-align: left;
 `;
@@ -61,7 +63,7 @@ export const VideoTitle = styled.h3`
 export const VideoDate = styled.span`
   color: #888;
   font-size: 1.5rem;
-  padding: 0em 1.25em;
+  padding: 0 1.25em;
 `;
 
 export const VideoDescription = styled.div`
@@ -72,15 +74,13 @@ export const VideoDescription = styled.div`
 export const Buttons = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 0em 2rem 1rem;
+  padding: 0 2rem 1rem;
 
   & a {
     font-size: 1.5rem;
-    background: #9659A7;
-    color: #FFF;
     flex-grow: 2;
-    margin-left: .25em;
-    margin-right: .25em;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
     padding: 15px;
   }
 `;
