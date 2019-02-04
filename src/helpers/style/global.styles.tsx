@@ -4,6 +4,10 @@ import { createGlobalStyle } from 'styled-components';
 import './fonts.styles.css';
 
 const GlobalStyleComponent = createGlobalStyle`
+  :root {
+    font-size: 10px;
+  }
+
   body {
     margin: 0;
     padding: 0;
@@ -19,6 +23,7 @@ const GlobalStyleComponent = createGlobalStyle`
       "Droid Sans",
       "Helvetica Neue",
       sans-serif;
+    font-size: 1.6rem;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
