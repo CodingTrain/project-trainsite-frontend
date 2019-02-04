@@ -9,7 +9,7 @@ import Navigation from '.';
 import { HeaderImage } from '../../App.styles';
 
 storiesOf('Navigation', module)
-  .add('Navigation', () =>
+  .add('Navigation', () => (
     <Router>
       <CodingTrainThemeProvider>
         <Navigation>
@@ -17,5 +17,5 @@ storiesOf('Navigation', module)
           You have to make the screen under 620px wide for the mobile nav to show up.
         </Navigation>
       </CodingTrainThemeProvider>
-    </Router>,
-  );
+    </Router>
+  ));

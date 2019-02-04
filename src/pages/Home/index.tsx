@@ -17,7 +17,7 @@ export default class Home extends Component {
               channel dedicated to beginner-friendly creative coding tutorials
               and challenges.
             </p>
-            <div className="buttons">
+            <div>
               <Button
                 link="https://youtube.com/thecodingtrain/?sub_confirmation=1"
                 background="red"
@@ -25,7 +25,7 @@ export default class Home extends Component {
                 target="_blank"
               >
                 Subscribe on YouTube
-            </Button>
+              </Button>
               <Button
                 link="https://youtube.com/thecodingtrain/join"
                 background="blue"
@@ -33,7 +33,7 @@ export default class Home extends Component {
                 target="_blank"
               >
                 Become a Member
-            </Button>
+              </Button>
             </div>
           </ChooChoo>
           <VideoCard video={exampleVideo} />

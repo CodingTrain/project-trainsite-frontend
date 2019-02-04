@@ -9,8 +9,8 @@ import { exampleVideo } from '../../helpers/testing';
 import { VideoCard } from '.';
 
 storiesOf('Video Card', module)
-  .add('With a video', () =>
+  .add('With a video', () => (
     <VideoCard
       video={exampleVideo}
-    />,
-  );
+    />
+  ));
