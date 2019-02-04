@@ -6,17 +6,16 @@ import { storiesOf } from '@storybook/react';
 import { CodingTrainThemeProvider } from '../../helpers/style/theme';
 import { MemoryRouter as Router } from 'react-router-dom';
 import Navigation from '.';
-import { HeaderImage, PageWrapper } from '../../App.styles';
+import { HeaderImage } from '../../App.styles';
 
 storiesOf('Navigation', module)
   .add('Navigation', () =>
     <Router>
       <CodingTrainThemeProvider>
-        <PageWrapper id="page-wrapper">
+        <Navigation>
           <HeaderImage />
           You have to make the screen under 620px wide for the mobile nav to show up.
-        </PageWrapper>
-        <Navigation />
+        </Navigation>
       </CodingTrainThemeProvider>
     </Router>,
   );

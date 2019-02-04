@@ -1,6 +1,6 @@
 import styled, { css } from '../../helpers/style';
 
-export const BurgerContainer = styled.div<{ open: boolean }>`
+export const BurgerContainer = styled.div<{ isOpen: boolean }>`
   display: none;
   position: fixed;
   top: 5px;
@@ -26,7 +26,7 @@ export const BurgerContainer = styled.div<{ open: boolean }>`
     transition: all ease-in-out 0.5s;
   }
 
-  ${props => props.open && css`
+  ${props => props.isOpen && css`
       & span:nth-child(1) {
         transform: rotate(-135deg);
         top: 20px;
@@ -48,7 +48,7 @@ export const BurgerContainer = styled.div<{ open: boolean }>`
   `}
 `;
 
-export const Backdrop = styled.div<{ open: boolean }>`
+export const Backdrop = styled.div<{ isOpen: boolean }>`
   background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
   top: 0;
@@ -56,7 +56,7 @@ export const Backdrop = styled.div<{ open: boolean }>`
   height: 100vh;
   opacity: 0;
   transition: opacity 500ms ease-in-out;
-  ${props => props.open && css`
+  ${props => props.isOpen && css`
       width: 100vw;
       opacity: 0.5;
   `}
@@ -76,7 +76,7 @@ function iterateDelays() {
   `;
 }
 
-export const Nav = styled.nav<{ open: boolean }>`
+export const Nav = styled.nav<{ isOpen: boolean }>`
   font-family: cubanoregular, sans-serif;
   width: 100%;
   height: 3rem;
@@ -98,7 +98,7 @@ export const Nav = styled.nav<{ open: boolean }>`
   }
 
   ${ iterateDelays() }
-  ${props => props.theme.media.tabletSmall<{ open: boolean }>`
+  ${props => props.theme.media.tabletSmall<{ isOpen: boolean }>`
     flex-direction: column;
     align-items: start;
     width: 0;
@@ -120,7 +120,7 @@ export const Nav = styled.nav<{ open: boolean }>`
       transition: left ease-in-out 0.5s;
     }
 
-    ${props => props.open && css`
+    ${props => props.isOpen && css`
 
       & > a {
         left: 0;
