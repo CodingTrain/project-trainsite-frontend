@@ -108,7 +108,7 @@ export const Nav = styled.nav<{ isOpen: boolean }>`
     background: none;
 
     & > a {
-      ${props.theme.colorPair.blue}
+      ${() => props.theme.colorPair.blue}
       position: relative;
       width: 180px;
       text-align: center;

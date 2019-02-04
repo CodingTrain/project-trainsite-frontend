@@ -5,5 +5,8 @@
   "extends": [
     "stylelint-config-standard",
     "stylelint-config-styled-components"
-  ]
+  ],
+  "rules": {
+    "property-blacklist": ["color", "background-color"]
+  }
 }
