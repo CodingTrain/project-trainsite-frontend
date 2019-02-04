@@ -25,7 +25,6 @@ export default class BackToTopButton extends Component<{}, { open: boolean }> {
   render() {
     return (
       <BackToTopStyles
-        id="back-to-top-button"
         title="Back to top"
         onClick={scrollToTop}
         open={this.state.open}

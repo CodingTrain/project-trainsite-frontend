@@ -17,7 +17,7 @@ export default class Home extends Component {
               channel dedicated to beginner-friendly creative coding tutorials
               and challenges.
             </p>
-            <div className="buttons">
+            <div>
               <Button
                 link="https://youtube.com/thecodingtrain/?sub_confirmation=1"
                 background="red"

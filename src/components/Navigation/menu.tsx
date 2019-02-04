@@ -36,11 +36,10 @@ export default class Menu extends Component<IProps> {
           isOpen={isOpen}
         />
         <BurgerContainer
-          id="burger-container"
           onClick={this.toggleMobileNavigation}
           isOpen={isOpen}
         >
-          <div id="burger">
+          <div>
             <span>
               &nbsp;
             </span>

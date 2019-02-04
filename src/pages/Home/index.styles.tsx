@@ -12,10 +12,6 @@ export const Wrapper = styled.div`
       width: 80%;
       margin: 0 0 1em 0;
     }
-
-    & .buttons {
-      flex-wrap: wrap;
-    }
   `}
 `;
 

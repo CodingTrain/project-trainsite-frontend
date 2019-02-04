@@ -12,7 +12,6 @@ export default class Footer extends Component {
           background="red"
           href="http://natureofcode.com"
           target="_blank"
-          className="nature-of-code"
         >
           <span>
             Nature of Code
@@ -23,7 +22,6 @@ export default class Footer extends Component {
           background="yellow"
           href="http://learningprocessing.com/"
           target="_blank"
-          className="learning-processing"
         >
           <span>
             Learning Processing
@@ -33,7 +31,6 @@ export default class Footer extends Component {
           background="blue"
           href="http://shiffman.net/"
           target="_blank"
-          className="shiffman-net"
         >
           <span>
             shiffman.net
