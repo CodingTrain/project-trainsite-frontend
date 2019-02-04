@@ -17,7 +17,7 @@ it('renders without crashing', () => {
        </Button>
        <Button
         link="/"
-        background="red"
+        colorPair="red"
         size="big"
        >
         react router link

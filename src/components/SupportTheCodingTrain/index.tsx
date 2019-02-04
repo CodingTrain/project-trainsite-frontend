@@ -21,7 +21,7 @@ export default class SupportTheCodingTrain extends Component {
               </p>
               <Button
                 link="https://patreon.com/codingtrain"
-                background="blue"
+                colorPair="blue"
                 size="big"
                 target="_blank"
               >
@@ -36,7 +36,7 @@ export default class SupportTheCodingTrain extends Component {
               </p>
               <Button
                 link="https://www.designbyhumans.com/shop/codingtrain/"
-                background="pink"
+                colorPair="pink"
                 size="big"
                 target="_blank"
               >
@@ -51,7 +51,7 @@ export default class SupportTheCodingTrain extends Component {
               </p>
               <Button
                 link="https://www.amazon.com/shop/thecodingtrain"
-                background="orange"
+                colorPair="orange"
                 size="big"
                 target="_blank"
               >

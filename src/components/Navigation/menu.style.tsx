@@ -49,7 +49,7 @@ export const BurgerContainer = styled.div<{ isOpen: boolean }>`
 `;
 
 export const Backdrop = styled.div<{ isOpen: boolean }>`
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8); /* stylelint-disable-line property-blacklist */
   position: fixed;
   top: 0;
   width: 0;
@@ -89,8 +89,8 @@ export const Nav = styled.nav<{ isOpen: boolean }>`
   align-items: center;
 
   & > a {
+    ${props => props.theme.textColor.white}
     text-decoration: none;
-    color: #fff;
     margin: 0 0.5em;
     padding-top: 10px;
     transition: none;
@@ -108,13 +108,13 @@ export const Nav = styled.nav<{ isOpen: boolean }>`
     background: none;
 
     & > a {
+      ${props.theme.colorPair.blue}
       position: relative;
       width: 180px;
       text-align: center;
       left: -300px;
       margin: 3px;
       padding: 10px 20px 10px 20px;
-      background-color: #2494c1;
       border-radius: 5px;
       transition: left ease-in-out 0.5s;
     }

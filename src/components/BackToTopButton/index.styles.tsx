@@ -1,11 +1,11 @@
 import styled from '../../helpers/style';
 
 export const BackToTopStyles = styled.div<{ open: boolean }>`
+  ${props => props.theme.colorPair.blue}
   z-index: 99;
   position: fixed;
   bottom: ${props => props.open ? '5px' : '-50px'};
   right: 5px;
-  background: ${props => props.theme.colors['blue']};
   padding: 20px 5px 10px 5px;
   border-radius: 5px;
   box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.6);
