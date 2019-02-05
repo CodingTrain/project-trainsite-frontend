@@ -63,7 +63,9 @@ export default class Menu extends Component<IProps> {
           </Link>
           <Link
             to="/codingchallenges"
-          >Coding Challenges</Link>
+          >
+            Coding Challenges
+          </Link>
           <Link
             to="/tutorials"
           >

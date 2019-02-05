@@ -18,7 +18,7 @@ class App extends Component {
             <HeaderImage />
             <main>
               <Switch>
-                <Route exact path="/" component={Home} />
+                <Route exact={true} path="/" component={Home} />
                 <Route path="/codingchallenges" component={CourseIndex} />
                 <Route path="/tutorials" component={CourseIndex} />
                 <Route path="/streams" component={CourseIndex} />
