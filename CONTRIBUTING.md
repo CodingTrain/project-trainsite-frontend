@@ -8,10 +8,10 @@ To make sure your contribution can be merged into the main repository, follow th
 ## Workflow
 
 - **Fork this repository** using the "Fork" button in the top right corner
-- **Create a feature branch** based off of the most recent commit on `develop` following this naming convention: `feature/<short-description>` (see more [below](#git-flow))
+- **Create a feature branch** based off of the most recent commit on `master` following this naming convention: `feature/<short-description>` (see more [below](#git-flow))
 - **Do your thing!** 👩‍💻 👨‍💻
-- **Write tests** for everything you added/modified to make sure everything works as expected
-- **Make a pull request** to this repository's `develop` branch
+- **Write tests** (if possible) for everything you added/modified to make sure everything works as expected
+- **Make a pull request** to this repository's `master` branch
 - **Be happy!** 🎉
 
 
@@ -19,13 +19,9 @@ To make sure your contribution can be merged into the main repository, follow th
 
 Please follow these guidelines Whilst developing. This helps keeping the code nice and organized.
 
-- Don't work directly on the `master` or `develop` branches (see [below](#git-flow))!
-- Run `npm run format && npm run lint` every time before creating a new commit!
-- If you encounter formatting issues, try `npm run format`
-- If you encounter formatting/linting issues, try `npm run fix`
+- Don't work directly on the `master` branch (see [below](#git-flow))!
+- Run `npm run lint` every time before creating a new commit!
 - Run `npm test` every time before submitting a pull request
-
-*Note: Formatting and linting will be done through git hooks automatically for you!*
 
 
 ## Git Flow
