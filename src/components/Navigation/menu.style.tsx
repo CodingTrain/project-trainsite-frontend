@@ -81,7 +81,7 @@ export const Nav = styled.nav<{ isOpen: boolean }>`
   width: 100%;
   height: 5rem;
   font-size: 18px;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0, 0, 0, 0.45);
   position: absolute;
   top: 0;
   display: flex;

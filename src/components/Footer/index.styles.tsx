@@ -24,7 +24,8 @@ export const Link = styled.a<{ color?: string, background: string }>`
     transform: scale(1);
   }
 
-  &:hover, &:focus span {
+  &:hover, 
+  &:focus span {
     transform: scale(1.2);
   }
 
