@@ -79,9 +79,9 @@ function iterateDelays() {
 export const Nav = styled.nav<{ isOpen: boolean }>`
   font-family: cubanoregular, sans-serif;
   width: 100%;
-  height: 3rem;
+  height: 5rem;
   font-size: 18px;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), transparent);
+  background: rgba(0, 0, 0, 0.45);
   position: absolute;
   top: 0;
   display: flex;
@@ -93,7 +93,6 @@ export const Nav = styled.nav<{ isOpen: boolean }>`
     color: #fff;
     margin: 0 0.5em;
     padding-top: 10px;
-    text-shadow: 0 0 5px #bbb;
     transition: none;
   }
 
