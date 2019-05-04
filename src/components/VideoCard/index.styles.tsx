@@ -61,7 +61,7 @@ export const VideoTitle = styled.h3`
 `;
 
 export const VideoDate = styled.span`
-  color: #888;
+  color: #515151;
   font-size: 1.5rem;
   padding: 0 1.25em;
 `;
