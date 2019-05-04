@@ -20,7 +20,7 @@ export default class Home extends Component {
             <div>
               <Button
                 link="https://youtube.com/thecodingtrain/?sub_confirmation=1"
-                background="red"
+                colorPair="red"
                 size="big"
                 target="_blank"
               >
@@ -28,7 +28,7 @@ export default class Home extends Component {
               </Button>
               <Button
                 link="https://youtube.com/thecodingtrain/join"
-                background="blue"
+                colorPair="blue"
                 size="big"
                 target="_blank"
               >

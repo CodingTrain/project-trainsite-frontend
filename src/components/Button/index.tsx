@@ -1,26 +1,30 @@
-import React, { Component } from 'react';
+import React, { Component, ReactElement } from 'react';
 import { ALink } from './index.styles';
 import { Link } from 'react-router-dom';
 
 import { StyledComponentProps } from 'styled-components';
-import { ThemeInterface } from '../../helpers/style/theme';
+import { ThemeInterface, ColorPair } from '../../helpers/style/theme';
 
 interface ButtonProps extends StyledComponentProps<'a', ThemeInterface, {}, ''> {
   link: string;
-  background?: string;
+  colorPair?: ColorPair;
   size?: string;
 }
 
+const LinkStripProps = ({ colorPair, size, ...props }: { [index: string]: any, to: string }) => (
+  <Link {...props} />
+);
+
 export default class Button extends Component<ButtonProps> {
   render() {
-    const { link, background, size, ...otherProps } = this.props;
+    const { link, colorPair, size, ...otherProps } = this.props;
 
     if (link.includes('https')) {
       // return external ALink
       return (
         <ALink
           href={link}
-          background={background}
+          colorPair={colorPair}
           size={size}
           {...otherProps}
         >
@@ -32,9 +36,9 @@ export default class Button extends Component<ButtonProps> {
     // return router Link
     return (
       <ALink
-        as={Link}
+        as={LinkStripProps}
         to={link}
-        background={background}
+        colorPair={colorPair}
         size={size}
         {...otherProps}
       >
