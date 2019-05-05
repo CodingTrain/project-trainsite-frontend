@@ -9,7 +9,7 @@ export default class Footer extends Component {
     return (
       <FooterWrapper>
         <Link
-          background="red"
+          colorPair="red"
           href="http://natureofcode.com"
           target="_blank"
         >
@@ -18,8 +18,7 @@ export default class Footer extends Component {
           </span>
         </Link>
         <Link
-          color="text"
-          background="yellow"
+          colorPair="yellow"
           href="http://learningprocessing.com/"
           target="_blank"
         >
@@ -28,7 +27,7 @@ export default class Footer extends Component {
           </span>
         </Link>
         <Link
-          background="blue"
+          colorPair="blue"
           href="http://shiffman.net/"
           target="_blank"
         >

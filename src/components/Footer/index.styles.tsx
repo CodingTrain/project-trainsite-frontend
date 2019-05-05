@@ -1,4 +1,5 @@
 import styled from '../../helpers/style';
+import { ColorPair } from '../../helpers/style/theme';
 
 export const FooterWrapper = styled.footer`
   margin-top: 50px;
@@ -9,12 +10,12 @@ export const FooterWrapper = styled.footer`
   `}
 `;
 
-export const Link = styled.a<{ color?: string, background: string }>`
+export const Link = styled.a<{ colorPair: ColorPair }>`
+  ${props => props.theme.colorPair[props.colorPair]}
   padding: 40px;
   flex-basis: 100%;
   text-align: center;
   text-decoration: none;
-  color: ${props => props.theme.colors[props.color || 'white']};
   margin: 0;
 
   span {
@@ -28,6 +29,4 @@ export const Link = styled.a<{ color?: string, background: string }>`
   &:focus span {
     transform: scale(1.2);
   }
-
-  background: ${props => props.theme.colors[props.background]};
 `;

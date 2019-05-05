@@ -30,11 +30,10 @@ export const ThumbnailContainer = styled.div`
 `;
 
 export const VideoBadge = styled.div`
+  ${props => props.theme.colorPair.green}
   position: absolute;
   right: 0;
   bottom: 0;
-  background: ${props => props.theme.colors.green};
-  color: ${props => props.theme.colors.white};
   font-family: "cubanoregular", sans-serif;
   letter-spacing: 0.4;
   font-size: 2rem;
@@ -53,7 +52,7 @@ export const Thumbnail = styled.div<{ url: string }>`
 `;
 
 export const VideoTitle = styled.h3`
-  color: #222;
+  ${props => props.theme.textColor.black}
   font-size: 2rem;
   padding: 1.25em 0.5em 0.4em 1em;
   margin: 0;
@@ -61,7 +60,7 @@ export const VideoTitle = styled.h3`
 `;
 
 export const VideoDate = styled.span`
-  color: #515151;
+  ${props => props.theme.textColor.gray}
   font-size: 1.5rem;
   padding: 0 1.25em;
 `;

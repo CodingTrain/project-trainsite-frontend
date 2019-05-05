@@ -17,7 +17,7 @@ storiesOf('Button', module)
       </Button>
       <Button
         link="/"
-        background="red"
+        color="red"
         size="big"
       >
         react router link
