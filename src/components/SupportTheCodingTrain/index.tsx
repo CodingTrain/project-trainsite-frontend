@@ -14,7 +14,7 @@ export default class SupportTheCodingTrain extends Component {
         <Title>Support the Coding Train</Title>
         <MediaWrapper>
           <StyledWrapper>
-              <img src={patreonImg} />
+              <img src={patreonImg} alt="" />
               <h3>Consider supporting?</h3>
               <p>
               Join the Coding Train community with a YouTube membership or Patreon subscription!
@@ -29,7 +29,7 @@ export default class SupportTheCodingTrain extends Component {
               </Button>
           </StyledWrapper>
           <StyledWrapper>
-              <img src={merchImg} />
+              <img src={merchImg} alt="" />
               <h3>Coding Train Store</h3>
               <p>
                 Visit Design by Humans for a variety of Coding Train merchandise.
@@ -44,7 +44,7 @@ export default class SupportTheCodingTrain extends Component {
               </Button>
           </StyledWrapper>
           <StyledWrapper>
-              <img src={amazonImg} />
+              <img src={amazonImg} alt="" />
               <h3>Love to read?</h3>
               <p>
                 Find books and other products featured on The Coding Train!
