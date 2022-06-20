@@ -12,7 +12,7 @@ To setup this project locally, follow these steps:
 
 ## Storybook
 
-This project has a Storybook set up that should allow you to develop presentational components seperately from the complete front-end. This is useful to build up components when we don't have the page they should be in or similar. You can [find out more about Storybook here](https://storybook.js.org/).
+This project has a Storybook set up that should allow you to develop presentational components separately from the complete front-end. This is useful to build up components when we don't have the page they should be in or similar. You can [find out more about Storybook here](https://storybook.js.org/).
 
 You can launch the Storybook for this repository by doing the following:
 
@@ -34,3 +34,4 @@ You can contribute in many different ways:
 ## Code of Conduct
 
 Please refer to The Coding Train's [Code of Conduct](https://github.com/CodingTrain/Code-of-Conduct).
+
